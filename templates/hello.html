@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta name="author" content="Sundae Chen"/>
+    <meta name="Web Server" content="SinaAppEngine"/>
+    <meta name="description" content="Sundae's Website" />
+    <meta name="keywords" content="Sundae,WHU"/>
+<style>
+#header {
+    background-color:yellow;
+    color:black;
+    text-align:center;
+}
+#aside {
+    line-height:30px;
+    background-color:white;
+    float:left;	
+    height:760px;
+}
+#section {
+	float:right;
+    width:76%;
+    height:760px;
+}
+#footer {
+    background-color:yellow;
+    color:black;
+    clear:both;
+    text-align:center; 	 
+}
+</style>
+</head>
+
+<body>
+
+<div id="header">
+	<br/>
+	<h1>Welcome To Sundae's Website</h1>
+	<p>Website is building, thank you for your support.</p>
+	<br/>
+</div>
+
+<div id="aside">
+	<table border="0" align="center" height="150">
+		<tr>
+			<th>
+                <p id="demo">Real-time Latitude<br/>And Longitude Inquiry</p>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <button onclick="getLocation()">GPS</button>
+					<script>
+					var x=document.getElementById("demo");
+					function getLocation()
+					{
+					if (navigator.geolocation)
+					{
+					navigator.geolocation.watchPosition(showPosition);
+					}
+					else{x.innerHTML="Geolocation is not supported by this browser.";}
+					}
+					function showPosition(position)
+					{
+					x.innerHTML="Latitude: " + position.coords.latitude + 
+					"<br/>Longitude: " + position.coords.longitude;	
+					}
+					</script>
+    		</th>
+		</tr>
+	</table>
+	<hr/>
+	<br/>
+	<h3 align="center">Transcript Inquiry</h3>
+	<br/>
+	<iframe src="http://sundae.applinzi.com/signin" height="450px"></iframe>
+</div>
+
+<div id="section">
+    <img src={{url1}} height="760px" width="100%" alt="图片被浏览器拦截了/(ㄒoㄒ)/~~换个浏览器或者设置后重试吧">
+</div>
+
+<div id="footer">
+	<hr/>
+
+    <table border="0" align="center" width="100%">
+    <tr>
+    <th width="20%"></th>
+    <th width="60%">
+	<table border="0" align="center">
+    	<tr>
+        	<th>
+                <img src={{url2}} height="150px" alt="图片被浏览器拦截了/(ㄒoㄒ)/~~换个浏览器或者设置后重试吧">
+            </th>
+			<th>
+                <address>
+    				Written by <a href="mailto:chxhyfx@163.com">Sundae</a>『在路上随风走』<br/>
+    				Visit me at:<br/>
+                    <a href="http://sundae.applinzi.com/home" target="__blank">sundae.applinzi.com</a><br/>
+    				WHU,China<br/>
+    			</address>
+            </th>
+    	</tr>
+	</table>
+    </th>
+	<th width="20%">
+    <p><img src={{url3}} width="30px"><a href="http://sundae.applinzi.com/phone">手机版</a><img src={{url4}} width="30px"><a href="http://sundae.applinzi.com/blog">我的博客</a> </p>
+        </th>
+        </tr>
+    </table>
+	<hr/>
+</div>
+</body>
+</html>
