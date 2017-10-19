@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>成绩查询</title>
+</head>
+<body>
+<center>
+<form name="signin" action="/signin" method="post">
+      <h5>Student ID</h5>
+  <p><input name="username" autofocus></p>
+      <h5>Password</h5>
+  <p><input name="password" type="password"></p>
+      <h5>Verification Code</h5>
+  <p><input name="picture"></p>
+      <img src={{pic}} alt="验证码被浏览器拦截了/(ㄒoㄒ)/~~换个浏览器或者设置后重试吧">
+  <p><button type="submit">Login</button></p>
+</form>
+<p><button onclick="location.reload();">Refresh</button></p>
+    </center>
+</body>
+</html>
