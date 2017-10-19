@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="zh-cn"/>
+    <meta name="author" content="Sundae Chen"/>
+    <meta name="Web Server" content="SinaAppEngine"/>
+    <meta name="description" content="Sundae's Website" />
+    <meta name="keywords" content="Sundae,WHU"/>
+<style>
+.cities {
+    background-color:yellow;
+    color:black;
+}	
+</style>
+</head>
+    <title>Sundae's Website</title>
+<body>
+
+<div class="cities">
+<center>
+    <hr/>
+<h1>Welcome To Sundae's Website</h1>
+    <p align="center">网站正在建设中，查询成绩单请前往:
+        <a href='http://sundae.applinzi.com/signin' target="__blank">我的成绩单</a></p>
+    <p align="center">查询网页源代码请前往：
+        <a href='http://sundae.applinzi.com/html' target="__blank">源代码查询</a></p>
+    <table border="0" align="center">
+    <tr>
+        <th><pre id="demo">实时经纬度:  </pre></th>
+        <th><button onclick="getLocation()">GPS</button></th>
+			<script>
+			var x=document.getElementById("demo");
+			function getLocation()
+  			{
+  			if (navigator.geolocation)
+   			 {
+   			 navigator.geolocation.watchPosition(showPosition);
+   			 }
+  			else{x.innerHTML="Geolocation is not supported by this browser.";}
+ 			 }
+			function showPosition(position)
+  			{
+  			x.innerHTML="Latitude: " + position.coords.latitude + 
+  			"<br/>Longitude: " + position.coords.longitude;	
+  			}
+			</script>
+    </tr>
+    </table>
+<img src={{url1}} style="max-width:100%;" alt="图片被浏览器拦截了/(ㄒoㄒ)/~~换个浏览器或者设置后重试吧">
+    <br/>
+    <hr/>
+<table border="0" align="center" width="100%">
+    <tr>
+    <th width="20%"></th>
+    <th width="60%">
+	<table border="0" align="center">
+    	<tr>
+        	<th>
+                <img src={{url2}} height="150px" alt="图片被浏览器拦截了/(ㄒoㄒ)/~~换个浏览器或者设置后重试吧">
+            </th>
+			<th>
+                <address>
+    				Written by <a href="mailto:chxhyfx@163.com">Sundae</a>『在路上随风走』<br/>
+    				Visit me at:<br/>
+                    <a href="http://sundae.applinzi.com/home" target="__blank">sundae.applinzi.com</a><br/>
+    				WHU,China<br/>
+    			</address>
+            </th>
+    	</tr>
+	</table>
+    </th>
+	<th width="20%">
+    <p ><img src={{url3}} width="30px"><a href="http://sundae.applinzi.com">电脑版</a><img src={{url4}} width="30px"><a href="http://sundae.applinzi.com/blog">我的博客</a></p>
+        </th>
+        </tr>
+    </table>
+    <hr/>
+</center>
+</div>
+</body>
+</html>
